@@ -1,9 +1,7 @@
-from aiogram import types
-from aiogram.dispatcher.filters.builtin import CommandStart
+# Importing necessary modules
+from aiogram import types  # Importing the 'types' module from the 'aiogram' library
+from aiogram.dispatcher.filters.builtin import CommandStart  # Importing the 'CommandStart' class from the 'aiogram.dispatcher.filters.builtin' module
 
+# Importing the 'dp' object from the 'loader.py' file
 from loader import dp
 
-
-@dp.message_handler(CommandStart())
-async def bot_start(message: types.Message):
-    await message.answer(f"Assalomu alaykum, {message.from_user.full_name}!")
